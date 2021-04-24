@@ -3,24 +3,26 @@
     <script>
       
       var tutorials = {"no-0":"https://www.instagram.com/p/CHxrJ67J5Dy/","no-1":"https://www.instagram.com/p/CHzwRJ0JMpb/","no-2":"https://www.instagram.com/p/CH2m33ypH65/","no-3":"https://www.instagram.com/p/CH438gkJjat/","no-4":"https://www.instagram.com/p/CH7Cg3fJ8dC/","no-5":"https://www.instagram.com/p/CH7-h0gpW4F/","no-6":"https://www.instagram.com/p/CH9XakmpoXE/","no-7":"https://www.instagram.com/p/CH-OWKEJhUT/","no-8":"https://www.instagram.com/p/CIABadbJkLk/","no-9":"https://www.instagram.com/p/CIA3nMhpiVW/","no-10":"https://www.instagram.com/p/CICvjX2J95i/","no-11":"https://www.instagram.com/p/CIDbEKkp2ji/","no-12":"https://www.instagram.com/p/CIFHfT8JI4v/","no-13":"https://www.instagram.com/p/CIGEqNbpBdI/","no-14":"https://www.instagram.com/p/CIHuheNJwIC/","no-15":"https://www.instagram.com/p/CIKa_RZpJxj/","no-16":"https://www.instagram.com/p/CIMz2jBpxHE/","no-17":"https://www.instagram.com/p/CINvXwrJU3J/","no-18":"https://www.instagram.com/p/CIPa-VJJ9v4/","no-19":"https://www.instagram.com/p/CIQU9kTJj0y/","no-20":"https://www.instagram.com/p/CIR9dioput4/","no-21":"https://www.instagram.com/p/CIS6Y52J92f/","no-22":"https://www.instagram.com/p/CIUh8DMJv0I/","no-23":"https://www.instagram.com/p/CIVf8YjpijD/","no-24":"https://www.instagram.com/p/CIXG61AJZJC/","no-25":"https://www.instagram.com/p/CIYMKufF-Ls/","no-26":"https://www.instagram.com/p/CIZn3QopfQe/","no-27":"https://www.instagram.com/p/CIcfSYGp_2w/","no-28":"https://www.instagram.com/p/CIe1YNuJtb6/","no-29":"https://www.instagram.com/p/CIhadZoJp8b/","no-30":"https://www.instagram.com/p/CIiT7lRpYCH/","no-31":"https://www.instagram.com/p/CIitoELlwD-/","no-32":"https://www.instagram.com/p/CIj-qHIJze8/","no-33":"https://www.instagram.com/p/CImj1gbpFJ1/","no-34":"https://www.instagram.com/p/CInlnX4pqJJ/","no-35":"https://www.instagram.com/p/CIpI-rXJ-qj/","no-36":"https://www.instagram.com/p/CIqGE9zFvQG/","no-37":"https://www.instagram.com/p/CIrtyHLJKOR/","no-38":"https://www.instagram.com/p/CIuZAmnpIAT/","no-39":"https://www.instagram.com/p/CIvRIA3JgYT/","no-40":"https://www.instagram.com/p/CIw_79yJCHO/","no-41":"https://www.instagram.com/p/CIxy_P4JMrs/","no-42":"https://www.instagram.com/p/CIzazzSpBkQ/","no-43":"https://www.instagram.com/p/CI0RNI4pgxu/","no-44":"https://www.instagram.com/p/CI2BhIgJIXB/","no-45":"https://www.instagram.com/p/CI25yY8pcxm/","no-46":"https://www.instagram.com/p/CI4kl-Ppn5o/","no-47":"https://www.instagram.com/p/CI5he1_pv7-/","no-48":"https://www.instagram.com/p/CI7UhjMJouc/","no-49":"https://www.instagram.com/p/CI8G296Jhud/","no-50":"https://www.instagram.com/p/CI90Ho8pg7U/","no-51":"https://www.instagram.com/p/CJAYf96Jn9h/","no-52":"https://www.instagram.com/p/CJBWdD-F57Z/","no-53":"https://www.instagram.com/p/CJCupE2pCTE/","no-54":"https://www.instagram.com/p/CJFjY2NpTTt/","no-55":"https://www.instagram.com/p/CJGKX_opOPn/","no-56":"https://www.instagram.com/p/CJG1Ta_pLNX/","no-57":"https://www.instagram.com/p/CJIA-HXpx6W/","no-58":"https://www.instagram.com/p/CJI2MIwJ55A/","no-59":"https://www.instagram.com/p/CJKtsz4pbcT/","no-60":"https://www.instagram.com/p/CJLbpAWJlt1/","no-61":"https://www.instagram.com/p/CJNKlI7pECS/","no-62":"https://www.instagram.com/p/CJOBlnFpQcE/","no-63":"https://www.instagram.com/p/CJOcs0sFcRC/","no-64":"https://www.instagram.com/p/CJP1we6pwt4/","no-65":"https://www.instagram.com/p/CJSi6IAJ2ma/","no-66":"https://www.instagram.com/p/CJTIPAXJ8QF/","no-67":"https://www.instagram.com/p/CJU5DErpT1S/","no-68":"https://www.instagram.com/p/CJXXDftJjIN/","no-69":"https://www.instagram.com/p/CJYUL3opLN1/"}
-     var stringtemplate = '';
+     var finaltempate = '';
       var limit = 10;
       var track = 1;
      for(prop in  tutorials){
          if(track == 1){
+          var stringtemplate = '';
             stringtemplate += '<ul>'
             }
           if(track <= 10){
            stringtemplate+= '<li> <a href="' + tutorials[prop] + '" >'+ prop+' </a>  </li> ';
           }else{
             track = 0;
-            stringtemplate += '</ul>'
-             document.body.appendChild(document.createElement(stringtemplate));
+            stringtemplate += '</ul>';
+            finaltempate += stringtemplate;
+            // document.body.appendChild(document.createElement(stringtemplate));
           }
        track++;
         
       };
-      //document.body.a = stringtemplate ;
+      document.body.innerHTML = finaltempate ;
     
     </script>
   </body>
