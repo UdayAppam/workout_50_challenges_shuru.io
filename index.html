@@ -13,13 +13,14 @@
           if(track <= 10){
            stringtemplate+= '<li> <a href="' + tutorials[prop] + '" '+ tutorials[prop] +' </a>  </li> ';
           }else{
-            track =1;
+            track = 0;
             stringtemplate += '</ul>'
+             document.body.appendChild(document.createElement(stringtemplate));
           }
        track++;
         
       };
-      document.body.innerHTML = stringtemplate ;
+      //document.body.a = stringtemplate ;
     
     </script>
   </body>
