@@ -1,4 +1,18 @@
 <html>
+  
+   <head>
+     <styles>
+       .anch {
+        text-align: center;
+    font-size: 30px;
+    padding: 100px;
+       }
+       
+       .ltblcaption{
+        display: table-caption;
+       }
+     </styles>
+  </head>
   <body >
     <script>
       
@@ -15,7 +29,7 @@
 
             }
           if(track <= limit){
-           stringtemplate+= '<li> <a href="' + tutorials[prop] + '" >'+ prop+' </a>  </li> <br> ';
+           stringtemplate+= '<li class="ltblcaption"> <a class="anch" href="' + tutorials[prop] + '" >'+ prop+' </a>  </li> <br> ';
           }else{
             track = 0;
             stringtemplate += '</ul> <br> <br>';
