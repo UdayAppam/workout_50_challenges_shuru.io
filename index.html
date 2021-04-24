@@ -6,11 +6,11 @@
      var stringtemplate = '';
       var limit = 10;
       var track = 1;
-      tutorials.forEach(function(tu){
-        stringtemplate+= '<li>' + tu + '  </li>;
+     for(prop in  tutorials){
+        stringtemplate+= '<li>' + tutorials[prop] + '  </li>;
         
       });
-     console.log(stringtemplate);;
+      document.body.innerHTML = stringtemplate;
     
     </script>
   </body>
