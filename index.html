@@ -11,6 +11,10 @@
        .ltblcaption{
         display: table-caption;
        }
+       
+       .nondec{
+        list-style: none;
+       }
      </styles>
   </head>
   <body >
@@ -25,11 +29,11 @@
          if(track == 1){
           var stringtemplate = '';
             
-            stringtemplate += '<h5> Day-' + days + '</h5> <ul>';
+            stringtemplate += '<h5> Day-' + days + '</h5> <ul class="nondec">';
 
             }
           if(track <= limit){
-           stringtemplate+= '<li class="ltblcaption"> <a class="anch" href="' + tutorials[prop] + '" >'+ prop+' </a>  </li> <br> ';
+           stringtemplate+= '<li class="ltblcaption"> <a class="anch" href="' + tutorials[prop] + '" >'+ prop+' </a> <iframe width="320" height="440" src="'+tutorials[prop]+'/embed" frameborder="0"></iframe>  </li> <br> ';
           }else{
             track = 0;
             stringtemplate += '</ul> <br> <br>';
